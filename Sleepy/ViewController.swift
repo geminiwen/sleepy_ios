@@ -43,7 +43,7 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
         let response = String(data: data, encoding: .ascii)
         if response == "*" {
             let view = MessageView.viewFromNib(layout: .statusLine)
-            view.configureTheme(backgroundColor: UIColor(red: 104.0/255, green: 220.0/255, blue: 184.0/255, alpha: 1), foregroundColor: .white)
+            view.configureTheme(backgroundColor: UIColor(red: 35.0/255, green: 212.0/255, blue: 186.0/255, alpha: 1), foregroundColor: .white)
             view.configureDropShadow()
             view.configureContent(body: "Mac 已经睡着啦👍")
             view.layoutMarginAdditions = UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0)
