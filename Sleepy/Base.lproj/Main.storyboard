@@ -147,6 +147,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="hostField" destination="HmO-0d-cSz" id="sWv-Jr-yet"/>
+                        <outlet property="portField" destination="X7y-Ib-N77" id="x42-ps-JuV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYO-aY-DcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
