@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A1AB19D5FCB5999C0735ACA /* Pods_Sleepy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C253D97C5A53EC967D49916 /* Pods_Sleepy.framework */; };
+		DA00B12222284021006893BA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00B12122284021006893BA /* SettingViewController.swift */; };
 		DA774B90222550D200A339A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA774B8F222550D200A339A9 /* AppDelegate.swift */; };
 		DA774B92222550D200A339A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA774B91222550D200A339A9 /* ViewController.swift */; };
 		DA774B95222550D200A339A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA774B93222550D200A339A9 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		77ED4AD4B6D7C515638C3017 /* Pods-Sleepy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleepy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sleepy/Pods-Sleepy.debug.xcconfig"; sourceTree = "<group>"; };
 		7DF5E30D7A16415922DB7DFA /* Pods-Sleepy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleepy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sleepy/Pods-Sleepy.release.xcconfig"; sourceTree = "<group>"; };
 		8C253D97C5A53EC967D49916 /* Pods_Sleepy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sleepy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA00B12122284021006893BA /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		DA774B8C222550D200A339A9 /* Sleepy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sleepy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA774B8F222550D200A339A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA774B91222550D200A339A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				DA774B8F222550D200A339A9 /* AppDelegate.swift */,
 				DA774B91222550D200A339A9 /* ViewController.swift */,
+				DA00B12122284021006893BA /* SettingViewController.swift */,
 				DA774B93222550D200A339A9 /* Main.storyboard */,
 				DA774B99222550D200A339A9 /* Assets.xcassets */,
 				DA774B9B222550D200A339A9 /* LaunchScreen.storyboard */,
@@ -336,6 +339,7 @@
 			files = (
 				DA774B98222550D200A339A9 /* Sleepy.xcdatamodeld in Sources */,
 				DA774B92222550D200A339A9 /* ViewController.swift in Sources */,
+				DA00B12222284021006893BA /* SettingViewController.swift in Sources */,
 				DA774B90222550D200A339A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
