@@ -20,6 +20,14 @@ class SettingViewController: UIViewController {
     func save(sender: Any) {
         let host = self.hostField.text
         let portString = self.portField.text
+        let port = Int(portString!)
+        
+        let defaults = UserDefaults.standard
+        defaults.set(host, forKey: "host")
+        defaults.set(port, forKey: "port")
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.post(name: NSNotification.Name(rawValue: "configUpdate"), object: nil, userInfo: nil)
         
         self.navigationController?.dismiss(animated: true, completion: nil)
     }

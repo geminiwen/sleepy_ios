@@ -17,15 +17,40 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
     
     var socket: GCDAsyncSocket?
     
+    private var host: String?
+    private var port: Int?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadService), name: NSNotification.Name("configUpdate"), object: nil)
+        self.reloadService()
+    }
+    
+    @objc
+    func reloadService() {
+        let defaults = UserDefaults.standard
+        self.host = defaults.string(forKey: "host")
+        self.port = defaults.integer(forKey: "port")
+    }
+    
     @objc
     @IBAction
     func sleep(sender: UIButton) {
+        guard let host = self.host, let port = self.port else {
+            let view = MessageView.viewFromNib(layout: .statusLine)
+            view.configureTheme(.error)
+            view.configureDropShadow()
+            view.configureContent(body: "请先点击右上角配置")
+            view.layoutMarginAdditions = UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0)
+            SwiftMessages.show(view: view)
+            return
+        }
+        
         let socket = GCDAsyncSocket(delegate: self, delegateQueue: DispatchQueue.main)
         self.socket = socket
-        let port = UInt16(8999)
         do {
             socket.autoDisconnectOnClosedReadStream = false
-            try socket.connect(toHost: "cloud.fengguang.me", onPort: port)
+            try socket.connect(toHost: host, onPort: UInt16(port))
             socket.write("*".data(using: .ascii)!, withTimeout: 10, tag: 0)
             socket.readData(toLength: 1, withTimeout: 10, tag: 0)
             self.ping.isEnabled = false
